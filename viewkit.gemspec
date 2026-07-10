@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "lib/viewkit/version"
+require_relative "lib/view_kit/version"
 
 Gem::Specification.new do |spec|
   spec.name = "viewkit"
-  spec.version = Viewkit::VERSION
+  spec.version = ViewKit::VERSION
   spec.authors = ["Bharat Gupta"]
   spec.email = ["bharat@bornwest.com"]
 
