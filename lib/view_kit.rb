@@ -1,8 +1,8 @@
-# frozen_string_literal: true
-
-require_relative "view_kit/version"
+require "view_kit/builder"
+require "view_kit/component"
+require "view_kit/engine"
+require "view_kit/errors"
+require "view_kit/version"
 
 module ViewKit
-  class Error < StandardError; end
-  # Your code goes here...
 end
