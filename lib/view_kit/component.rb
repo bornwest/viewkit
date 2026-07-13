@@ -1,14 +1,17 @@
 require "view_kit/helpers/propertiable"
+require "view_kit/helpers/variantable"
 
 module ViewKit
   class Component
     include Helpers::Propertiable
+    include Helpers::Variantable
 
     attr_accessor :view_context
 
     def initialize(*args, **kwargs, &block)
       @children = block
-      set_properties(*args)
+      set_properties(args)
+      set_variants(kwargs)
     end
 
     def to_s
@@ -20,9 +23,6 @@ module ViewKit
     end
 
     class << self
-      def variant(arg1, arg2)
-      end
-
       def state(*args)
       end
 

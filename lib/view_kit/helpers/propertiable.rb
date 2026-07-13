@@ -5,9 +5,9 @@ module ViewKit
         base.extend ClassMethods
       end
 
-      def set_properties(*args)
+      def set_properties(arr = [])
         self.class.properties.each.with_index do |property, idx|
-          value = args[idx]
+          value = arr[idx]
           if property.valid?(value)
             send("#{property.name}=", value)
           else
